@@ -1,11 +1,21 @@
-he example adds the sayName method, which is a function that returns a sentence giving the name of the duck.
+Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope.
 
-Notice that the method accessed the name property in the return statement using duck.name. The next challenge will cover another way to do this.
+INPUT -> PROCESS -> OUTPUT
+
+Functional programming is about:
+
+1) Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change
+
+2) Pure functions - the same input always gives the same output
+
+3) Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled
 
 
-Using the dog object, give it a method called sayLegs. The method should return the sentence "This dog has 4 legs."
+The members of freeCodeCamp happen to love tea.
+
+In the code editor, the prepareTea and getTea functions are already defined for you. Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
 
 Passed
-dog.sayLegs() should be a function.
+The tea4TeamFCC variable should hold 40 cups of tea for the team.
 Passed
-dog.sayLegs() should return the given string - note that punctuation and spacing matter.
+The tea4TeamFCC variable should hold cups of green tea.
