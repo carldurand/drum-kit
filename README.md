@@ -1,21 +1,7 @@
-Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope.
+Intermediate Algorithm Scripting: Sum All Primes
+Sum all the prime numbers up to and including the provided number.
 
-INPUT -> PROCESS -> OUTPUT
+A prime number is defined as a number greater than one and having only two divisors, one and itself. For example, 2 is a prime number because it's only divisible by one and two.
 
-Functional programming is about:
+The provided number may not be a prime.
 
-1) Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change
-
-2) Pure functions - the same input always gives the same output
-
-3) Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled
-
-
-The members of freeCodeCamp happen to love tea.
-
-In the code editor, the prepareTea and getTea functions are already defined for you. Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
-
-Passed
-The tea4TeamFCC variable should hold 40 cups of tea for the team.
-Passed
-The tea4TeamFCC variable should hold cups of green tea.
