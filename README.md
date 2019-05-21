@@ -1,7 +1,11 @@
-Intermediate Algorithm Scripting: Sum All Primes
-Sum all the prime numbers up to and including the provided number.
+Basic Algorithm Scripting: Factorialize a Number
+Return the factorial of the provided integer.
 
-A prime number is defined as a number greater than one and having only two divisors, one and itself. For example, 2 is a prime number because it's only divisible by one and two.
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
 
-The provided number may not be a prime.
+Factorials are often represented with the shorthand notation n!
+
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
+Only integers greater than or equal to zero will be supplied to the function.
 
