@@ -1,6 +1,18 @@
-function factorialize(num) {
-  if (num === 0) { return 1; }
-  return num * factorialize(num-1);
+function sumFibs(num) {
+    var prevNumber = 0;
+    var currNumber = 1;
+    var result = 0;
+    while (currNumber <= num) {
+        if (currNumber % 2 !== 0) {
+            result += currNumber;
+        }
+
+        currNumber += prevNumber;
+        prevNumber = currNumber - prevNumber;
+    }
+
+    return result;
 }
 
-factorialize(5);
+// test here
+sumFibs(4);
