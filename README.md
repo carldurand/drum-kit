@@ -1,11 +1,5 @@
-Basic Algorithm Scripting: Factorialize a Number
-Return the factorial of the provided integer.
+Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
 
-If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
 
-Factorials are often represented with the shorthand notation n!
-
-For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
-
-Only integers greater than or equal to zero will be supplied to the function.
-
+For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
