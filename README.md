@@ -1,5 +1,12 @@
-Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+The code editor has a simple controlled input component with a styled border. You want to style this border red if the user types more than 15 characters of text in the input box. Add a condition to check for this and, if the condition is valid, set the input border style to 3px solid red. You can try it out by entering text in the input.
 
-The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
-
-For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
+Passed
+The GateKeeper component should render a div element.
+Passed
+The GateKeeper component should be initialized with a state key input set to an empty string.
+Passed
+The GateKeeper component should render an h3 tag and an input tag.
+Passed
+The input tag should initially have a style of 1px solid black for the border property.
+Passed
+The input tag should be styled with a border of 3px solid red if the input value in state is longer than 15 characters.
