@@ -1,46 +1,40 @@
-const textAreaStyles = {
-  width: 235,
-  margin: 5
-};
-
-class MyToDoList extends React.Component {
+class MyComponent extends React.Component {
   constructor(props) {
     super(props);
-    // change code below this line
     this.state = {
-      userInput: '',
-      toDoList: []
+      display: true
     }
-    // change code above this line
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.toggleDisplay = this.toggleDisplay.bind(this);
   }
-  handleSubmit() {
-    const itemsArray = this.state.userInput.split(',');
+  toggleDisplay() {
     this.setState({
-      toDoList: itemsArray
-    });
-  }
-  handleChange(e) {
-    this.setState({
-      userInput: e.target.value
+      display: !this.state.display
     });
   }
   render() {
-    const items = this.state.toDoList.map(i => <li>{i}</li>); // change code here
+    // change code below this line
+if (this.state.display === true) {
+  return (
+    <div>
+      <button onClick={this.toggleDisplay}>Toggle Display</button>
+      <h1>Displayed!</h1>
+    </div>
+  );
+}
+
+else {
+  return (
+    <div>
+      <button onClick={this.toggleDisplay}>Toggle Display</button>
+    </div>
+  )
+}
+
     return (
-      <div>
-        <textarea
-          onChange={this.handleChange}
-          value={this.state.userInput}
-          style={textAreaStyles}
-          placeholder="Separate Items With Commas" /><br />
-        <button onClick={this.handleSubmit}>Create List</button>
-        <h1>My "To Do" List:</h1>
-        <ul>
-          {items}
-        </ul>
-      </div>
+       <div>
+         <button onClick={this.toggleDisplay}>Toggle Display</button>
+         <h1>Displayed!</h1>
+       </div>
     );
   }
 };
