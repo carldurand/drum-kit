@@ -1,12 +1,15 @@
-MyComponent contains a boolean in its state which tracks whether you want to display some element in the UI or not. The button toggles the state of this value. Currently, it renders the same UI every time. Rewrite the render() method with an if/else statement so that if display is true, you return the current markup. Otherwise, return the markup without the h1 element.
+Concatenation means to join items end to end. JavaScript offers the concat method for both strings and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to concat, which is added to the end of the first array. It returns a new array and does not mutate either of the original arrays. Here's an example:
 
-Note: You must write an if/else to pass the tests. Use of the ternary operator will not pass here.
+[1, 2, 3].concat([4, 5, 6]);
+// Returns a new array [1, 2, 3, 4, 5, 6]
+
+Use the concat method in the nonMutatingConcat function to concatenate attach to the end of original. The function should return the concatenated array.
 
 Passed
-MyComponent should exist and render.
+Your code should use the concat method.
 Passed
-The render method should use an if/else statement to check the condition of this.state.display.
+The first array should not change.
 Passed
-When display is set to true, a div, button, and h1 should render.
+The second array should not change.
 Passed
-When display is set to false, only a div and button should render.
+nonMutatingConcat([1, 2, 3], [4, 5]) should return [1, 2, 3, 4, 5].
