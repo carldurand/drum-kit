@@ -1,18 +1,10 @@
-function sumFibs(num) {
-    var prevNumber = 0;
-    var currNumber = 1;
-    var result = 0;
-    while (currNumber <= num) {
-        if (currNumber % 2 !== 0) {
-            result += currNumber;
-        }
-
-        currNumber += prevNumber;
-        prevNumber = currNumber - prevNumber;
-    }
-
-    return result;
+function nonMutatingConcat(original, attach) {
+  // Add your code below this line
+  
+  return original.concat(attach); 
+  
+  // Add your code above this line
 }
-
-// test here
-sumFibs(4);
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
