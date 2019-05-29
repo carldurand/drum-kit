@@ -1,15 +1,22 @@
-Concatenation means to join items end to end. JavaScript offers the concat method for both strings and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to concat, which is added to the end of the first array. It returns a new array and does not mutate either of the original arrays. Here's an example:
+The join method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
 
-[1, 2, 3].concat([4, 5, 6]);
-// Returns a new array [1, 2, 3, 4, 5, 6]
+Here's an example:
 
-Use the concat method in the nonMutatingConcat function to concatenate attach to the end of original. The function should return the concatenated array.
+var arr = ["Hello", "World"];
+var str = arr.join(" ");
+// Sets str to "Hello World"
+
+Use the join method (among others) inside the sentensify function to make a sentence from the words in the string str. The function should return a string. For example, "I-like-Star-Wars" would be converted to "I like Star Wars". For this challenge, do not use the replace method.
 
 Passed
-Your code should use the concat method.
+Your code should use the join method.
 Passed
-The first array should not change.
+Your code should not use the replace method.
 Passed
-The second array should not change.
+sentensify("May-the-force-be-with-you") should return a string.
 Passed
-nonMutatingConcat([1, 2, 3], [4, 5]) should return [1, 2, 3, 4, 5].
+sentensify("May-the-force-be-with-you") should return "May the force be with you".
+Passed
+sentensify("The.force.is.strong.with.this.one") should return "The force is strong with this one".
+Passed
+sentensify("There,has,been,an,awakening") should return "There has been an awakening".
