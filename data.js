@@ -1,32 +1,19 @@
-function pairElement(str) {
-      // Return each strand as an array of two elements, the original and the pair.
-      var paired = [];
+function fearNotLetter(str) {
 
-      // Function to check with strand to pair.
-      var search = function(char) {
-        switch (char) {
-          case 'A':
-            paired.push(['A', 'T']);
-            break;
-          case 'T':
-            paired.push(['T', 'A']);
-            break;
-          case 'C':
-            paired.push(['C', 'G']);
-            break;
-          case 'G':
-            paired.push(['G', 'C']);
-            break;
-        }
-      };
+  for(var i = 0; i < str.length; i++) {
+    /* code of current character */
+    var code = str.charCodeAt(i);
 
-      // Loops through the input and pair.
-      for (var i = 0; i < str.length; i++) {
-        search(str[i]);
-      }
+    /* if code of current character is not equal to first character + no of iteration
+    hence character has been escaped */
+    if (code !== str.charCodeAt(0) + i) {
 
-      return paired;
-    }
+      /* if current character has escaped one character find previous char and return */
+      return String.fromCharCode(code - 1);
+    }  
+  }
+  return undefined;
+}
 
-    // test here
-    pairElement("GCG");
+// test here
+fearNotLetter("abce");
