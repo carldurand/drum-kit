@@ -1,9 +1,19 @@
-Intermediate Algorithm Scripting: Binary Agents
-Return an English translated sentence of the passed binary string.
+Bootstrap: Give Each Element a Unique id
+We will also want to be able to use jQuery to target each button by its unique id.
 
-The binary string will be space separated.
+Give each of your buttons a unique id, starting with target1 and ending with target6.
 
-Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write your own code.
+Make sure that target1 to target3 are in #left-well, and target4 to target6 are in #right-well.
 
-binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111") should return "Aren't bonfires fun!?"
-binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001") should return "I love FreeCodeCamp!"
+Passed
+One button element should have the id target1.
+Passed
+One button element should have the id target2.
+Passed
+One button element should have the id target3.
+Passed
+One button element should have the id target4.
+Passed
+One button element should have the id target5.
+Passed
+One button element should have the id target6.
