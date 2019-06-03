@@ -1,40 +1,40 @@
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      display: true
-    }
-    this.toggleDisplay = this.toggleDisplay.bind(this);
-  }
-  toggleDisplay() {
-    this.setState({
-      display: !this.state.display
-    });
-  }
-  render() {
-    // change code below this line
-if (this.state.display === true) {
+const TypesOfFruit = () => {
   return (
     <div>
-      <button onClick={this.toggleDisplay}>Toggle Display</button>
-      <h1>Displayed!</h1>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
     </div>
   );
-}
+};
 
-else {
+const Fruits = () => {
   return (
     <div>
-      <button onClick={this.toggleDisplay}>Toggle Display</button>
+      { /* change code below this line */ }
+      <TypesOfFruit />
+      { /* change code above this line */ }
     </div>
-  )
-}
+  );
+};
 
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
-       <div>
-         <button onClick={this.toggleDisplay}>Toggle Display</button>
-         <h1>Displayed!</h1>
-       </div>
+      <div>
+        <h1>Types of Food:</h1>
+        { /* change code below this line */ }
+        < Fruits/>
+        { /* change code above this line */ }
+      </div>
     );
   }
 };
