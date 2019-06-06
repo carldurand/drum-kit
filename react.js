@@ -1,23 +1,21 @@
-const ChildComponent = () => {
-  return (
-    <div>
-      <p>I am the child</p>
-    </div>
-  );
+const List= (props) => {
+  return <p>{props.tasks.join(", ")}</p>
 };
 
-class ParentComponent extends React.Component {
+// ... same as above
+
+class ToDo extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
       <div>
-        <h1>I am the parent</h1>
-        { /* change code below this line */ }
-        <ChildComponent />
-
-        { /* change code above this line */ }
+        <h1>To Do Lists</h1>
+        <h2>Today</h2>
+        <List tasks={["Walk", "Cook", "Bake"]} />
+        <h2>Tomorrow</h2>
+        <List tasks={["Study", "Code", "Eat"]}/>
       </div>
     );
   }
