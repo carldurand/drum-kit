@@ -1,22 +1,33 @@
-React: Create a Component with Composition
-Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a Navbar, Dashboard, and Footer.
+React: Pass an Array as Props
+The last challenge demonstrated how to pass information from a parent component to a child component as props or properties. This challenge looks at how arrays can be passed as props. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
 
-To compose these components together, you could create an App parent component which renders each of these three components as children. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the render method you could write:
+<ParentComponent>
+  <ChildComponent colors={["green", "blue", "red"]} />
+</ParentComponent>
+The child component then has access to the array property colors. Array methods such as join() can be used when accessing the property.
 
-return (
-<App>
-  <Navbar />
-  <Dashboard />
-  <Footer />
-</App>
-)
-When React encounters a custom HTML tag that references another component (a component name wrapped in < /> like in this example), it renders the markup for that component in the location of the tag. This should illustrate the parent/child relationship between the App component and the Navbar, Dashboard, and Footer.
+const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>
+
+This will join all colors array items into a comma separated string and produce:
+
+<p>green, blue, red</p>
+
+Later, we will learn about other common methods to render arrays of data in React.
 
 
-In the code editor, there is a simple functional component called ChildComponent and a React component called ParentComponent. Compose the two together by rendering the ChildComponent within the ParentComponent. Make sure to close the ChildComponent tag with a forward slash.
+There are List and ToDo components in the code editor. When rendering each List from the ToDo component, pass in a tasks property assigned to an array of to-do tasks, for example ["walk dog", "workout"]. Then access this tasks array in the List component, showing its value within the p element. Use join(", ") to display the props.tasksarray in the p element as a comma separated list. Today's list should have at least 2 tasks and tomorrow's should have at least 3 tasks.
 
-Note: ChildComponent is defined with an ES6 arrow function because this is a very common practice when using React. However, know that this is just a function. If you aren't familiar with the arrow function syntax, please refer to the JavaScript section.
-
-The React component should return a single div element.
-The component should return two nested elements.
-The component should return the ChildComponent as its second child.
+Passed
+The ToDo component should return a single outer div.
+Passed
+The third child of the ToDo component should be an instance of the List component.
+Passed
+The fifth child of the ToDo component should be an instance of the List component.
+Passed
+Both instances of the List component should have a property called tasks and tasks should be of type array.
+Passed
+The first List component representing the tasks for today should have 2 or more items.
+Passed
+The second List component representing the tasks for tomorrow should have 3 or more items.
+Passed
+The List component should render the value from the tasks prop in the p tag.
