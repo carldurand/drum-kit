@@ -1,33 +1,18 @@
-React: Pass an Array as Props
-The last challenge demonstrated how to pass information from a parent component to a child component as props or properties. This challenge looks at how arrays can be passed as props. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
+React and Redux: Connect Redux to React
+Now that you've written both the mapStateToProps() and the mapDispatchToProps() functions, you can use them to map state and dispatch to the props of one of your React components. The connect method from React Redux can handle this task. This method takes two optional arguments, mapStateToProps() and mapDispatchToProps(). They are optional because you may have a component that only needs access to state but doesn't need to dispatch any actions, or vice versa.
 
-<ParentComponent>
-  <ChildComponent colors={["green", "blue", "red"]} />
-</ParentComponent>
-The child component then has access to the array property colors. Array methods such as join() can be used when accessing the property.
+To use this method, pass in the functions as arguments, and immediately call the result with your component. This syntax is a little unusual and looks like:
 
-const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>
+connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 
-This will join all colors array items into a comma separated string and produce:
-
-<p>green, blue, red</p>
-
-Later, we will learn about other common methods to render arrays of data in React.
+Note: If you want to omit one of the arguments to the connect method, you pass null in its place.
 
 
-There are List and ToDo components in the code editor. When rendering each List from the ToDo component, pass in a tasks property assigned to an array of to-do tasks, for example ["walk dog", "workout"]. Then access this tasks array in the List component, showing its value within the p element. Use join(", ") to display the props.tasksarray in the p element as a comma separated list. Today's list should have at least 2 tasks and tomorrow's should have at least 3 tasks.
+The code editor has the mapStateToProps() and mapDispatchToProps() functions and a new React component called Presentational. Connect this component to Redux with the connect method from the ReactRedux global object, and call it immediately on the Presentational component. Assign the result to a new const called ConnectedComponent that represents the connected component. That's it, now you're connected to Redux! Try changing either of connect's arguments to null and observe the test results.
 
 Passed
-The ToDo component should return a single outer div.
+The Presentational component should render.
 Passed
-The third child of the ToDo component should be an instance of the List component.
+The Presentational component should receive a prop messages via connect.
 Passed
-The fifth child of the ToDo component should be an instance of the List component.
-Passed
-Both instances of the List component should have a property called tasks and tasks should be of type array.
-Passed
-The first List component representing the tasks for today should have 2 or more items.
-Passed
-The second List component representing the tasks for tomorrow should have 3 or more items.
-Passed
-The List component should render the value from the tasks prop in the p tag.
+The Presentational component should receive a prop submitNewMessage via connect.
