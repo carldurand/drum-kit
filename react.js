@@ -1,22 +1,33 @@
-const List= (props) => {
-  return <p>{props.tasks.join(", ")}</p>
+const addMessage = (message) => {
+  return {
+    type: 'ADD',
+    message: message
+  }
 };
 
-// ... same as above
+const mapStateToProps = (state) => {
+  return {
+    messages: state
+  }
+};
 
-class ToDo extends React.Component {
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewMessage: (message) => {
+      dispatch(addMessage(message));
+    }
+  }
+};
+
+class Presentational extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return (
-      <div>
-        <h1>To Do Lists</h1>
-        <h2>Today</h2>
-        <List tasks={["Walk", "Cook", "Bake"]} />
-        <h2>Tomorrow</h2>
-        <List tasks={["Study", "Code", "Eat"]}/>
-      </div>
-    );
+    return <h3>This is a Presentational Component</h3>
   }
 };
+
+const connect = ReactRedux.connect;
+// change code below this line
+const ConnectedComponent = connect (mapStateToProps, mapDispatchToProps) (Presentational)
